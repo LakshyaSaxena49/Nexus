@@ -8,7 +8,7 @@ import ContactList from "../components/ContactList";
 import ChatContainer from "../components/ChatContainer";
 import NoConversationPlaceholder from "../components/NoConversationPlaceholder";
 
-function ChatPage() {
+function ChatPage() { // chat interface
   const { activeTab, selectedUser } = useChatStore();
 
   return (
