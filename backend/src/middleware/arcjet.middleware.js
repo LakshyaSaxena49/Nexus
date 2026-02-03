@@ -19,7 +19,7 @@ export const arcjetProtection = async (req, res, next) => {
       }
     }
 
-    // check for spoofed bots
+    // check for spoofed bots- that acts like a human
     if (decision.results.some(isSpoofedBot)) {
       return res.status(403).json({
         error: "Spoofed bot detected",
