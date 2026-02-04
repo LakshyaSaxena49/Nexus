@@ -15,8 +15,8 @@ const router = express.Router();
 router.use(arcjetProtection, protectRoute);
 
 router.get("/contacts", getAllContacts);
-router.get("/chats", getChatPartners);
-router.get("/:id", getMessagesByUserId);
-router.post("/send/:id", sendMessage);
+router.get("/chats", getChatPartners); // this is to get all chat partners
+router.get("/:id", getMessagesByUserId); // get messages by user id
+router.post("/send/:id", sendMessage); // post means sending message to user id
 
 export default router;
