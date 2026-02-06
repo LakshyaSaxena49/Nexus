@@ -10,7 +10,7 @@ import { arcjetProtection } from "../middleware/arcjet.middleware.js";
 
 const router = express.Router();
 
-// the middlewares execute in order - so requests get rate-limited first, then authenticated.
+// the middlewares execute in order - so requests get *rate-limited first*, then authenticated(security).
 // this is actually more efficient since unauthenticated requests get blocked by rate limiting before hitting the auth middleware.
 router.use(arcjetProtection, protectRoute);
 
